@@ -1,5 +1,6 @@
 .release-assets/
 .release-staging/
+.tools/
 *.log
 Thumbs.db
 .DS_Store
