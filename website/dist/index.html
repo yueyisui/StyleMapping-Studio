@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c0a">
+  <meta name="description" content="StyleMapping Studio 是一款完全本地运行的艺术与真实风格迁移工具，支持 Windows 和 Android。">
+  <title>StyleMapping Studio — 本地风格迁移</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23090c0a'/%3E%3Cpath d='M17 20h30v8H27v8h20v8H17z' fill='%23c9f75c'/%3E%3Ccircle cx='46' cy='18' r='5' fill='%23f1f5ef'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航" data-i18n-aria="navLabel">
+      <a class="brand" href="#top" aria-label="StyleMapping Studio 首页">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-copy">
+          <strong>StyleMapping</strong>
+          <small>STUDIO</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="打开导航" data-i18n-aria="menuLabel">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#modes" data-i18n="navModes">迁移模式</a>
+        <a href="#showcase" data-i18n="navShowcase">效果展示</a>
+        <a href="#downloads" data-i18n="navDownload">下载</a>
+        <a href="#faq" data-i18n="navFaq">常见问题</a>
+        <a href="#" data-github-link data-i18n="navGithub">GitHub</a>
+      </div>
+
+      <div class="language-switch" role="group" aria-label="语言" data-i18n-aria="languageLabel">
+        <button type="button" data-language="zh" class="active" aria-pressed="true">中文</button>
+        <span>/</span>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy reveal">
+        <div class="hero-overline">
+          <div class="eyebrow"><span></span><span data-i18n="heroEyebrow">本地 AI 图像创作工具</span></div>
+          <span class="hero-edition">ART + PHOTO / 2026</span>
+        </div>
+        <h1 data-i18n-html="heroTitle">把灵感映射到<br><em>每一张照片</em></h1>
+        <p class="hero-lead" data-i18n="heroLead">上传内容图和参考风格，在自己的电脑或手机上完成艺术风格与真实风格迁移。照片不离开设备。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#downloads" data-download="windows-gpu">
+            <span data-i18n="downloadWindows">下载 Windows 版</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+          </a>
+          <a class="button secondary" href="#downloads" data-download="android">
+            <span data-i18n="downloadAndroid">下载 Android 版</span>
+          </a>
+        </div>
+        <div class="trust-row" aria-label="产品特性" data-i18n-aria="trustLabel">
+          <span><i></i><b data-i18n="trustLocal">完全本地</b></span>
+          <span><i></i><b data-i18n="trustNoAccount">无需账号</b></span>
+          <span><i></i><b data-i18n="trustOffline">无需上传</b></span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="真实风格迁移前后对比" data-i18n-aria="heroCompareLabel">
+        <div class="visual-header">
+          <div>
+            <span class="visual-index">01</span>
+            <strong data-i18n="photoMode">真实风格迁移</strong>
+          </div>
+          <span class="local-pill"><i></i><span data-i18n="processedLocally">本机生成</span></span>
+        </div>
+        <div class="compare" data-compare style="--split: 50%">
+            <img class="compare-after" src="assets/photo-after.png" alt="真实风格迁移后的秋日湖景" data-i18n-alt="photoAfterAlt">
+          <div class="compare-before-wrap">
+            <img class="compare-before" src="assets/photo-before.jpg" alt="迁移前的秋日湖景" data-i18n-alt="photoBeforeAlt">
+          </div>
+          <span class="compare-tag before-tag" data-i18n="original">原图</span>
+          <span class="compare-tag after-tag" data-i18n="result">结果</span>
+          <span class="compare-line" aria-hidden="true"></span>
+          <span class="compare-handle" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m9 8-4 4 4 4m6-8 4 4-4 4M5 12h14"/></svg>
+          </span>
+          <input type="range" min="0" max="100" value="50" aria-label="拖动比较原图和结果" data-i18n-aria="sliderLabel">
+        </div>
+        <div class="visual-caption">
+          <span data-i18n="photoCaption">保留真实纹理，迁移色彩与光线氛围</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy-band">
+      <div class="shell privacy-grid reveal">
+        <div class="privacy-title">
+          <span class="shield" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg>
+          </span>
+          <div><small data-i18n="privacyKicker">LOCAL FIRST</small><strong data-i18n="privacyTitle">你的照片，只属于你的设备</strong></div>
+        </div>
+        <p data-i18n="privacyBody">没有云端上传，没有等待队列。模型和图片处理都发生在本地，断网也能继续创作。</p>
+        <div class="privacy-flow" aria-label="本地处理流程" data-i18n-aria="privacyFlowLabel">
+          <span data-i18n="yourPhoto">你的照片</span><b>→</b><span data-i18n="localModel">本地模型</span><b>→</b><span data-i18n="yourWork">你的作品</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="modes">
+      <div class="section-heading reveal">
+        <span class="section-number">02 / MODES</span>
+        <h2 data-i18n="modesTitle">一种工具，两种视觉语言</h2>
+        <p data-i18n="modesBody">根据参考图选择合适的迁移方式。艺术模式重构笔触与质感，真实模式专注颜色与光影。</p>
+      </div>
+      <div class="mode-grid">
+        <article class="mode-card artistic reveal">
+          <div class="mode-top"><span>ART</span><b>01</b></div>
+          <div class="mode-card-body">
+            <div class="mode-icon" aria-hidden="true">✦</div>
+            <h3 data-i18n="artTitle">艺术风格迁移</h3>
+            <p data-i18n="artBody">提取绘画的笔触、色块和材质，让照片形成明显的艺术表达。</p>
+            <ul>
+              <li data-i18n="artFeature1">绘画质感与笔触映射</li>
+              <li data-i18n="artFeature2">可调节风格强度</li>
+              <li data-i18n="artFeature3">适合插画与创意作品</li>
+            </ul>
+          </div>
+          <div class="mode-preview">
+            <img src="assets/art-after.png" alt="艺术风格迁移效果预览" data-i18n-alt="artAfterAlt">
+            <span>OUTPUT / ARTISTIC</span>
+          </div>
+        </article>
+        <article class="mode-card photo reveal">
+          <div class="mode-top"><span>PHOTO</span><b>02</b></div>
+          <div class="mode-card-body">
+            <div class="mode-icon" aria-hidden="true">◉</div>
+            <h3 data-i18n="photoTitle">真实风格迁移</h3>
+            <p data-i18n="photoBody">保持场景结构和自然纹理，迁移参考照片的色彩、光线与整体氛围。</p>
+            <ul>
+              <li data-i18n="photoFeature1">保留真实画面细节</li>
+              <li data-i18n="photoFeature2">色彩与光影风格化</li>
+              <li data-i18n="photoFeature3">适合摄影与调色探索</li>
+            </ul>
+          </div>
+          <div class="mode-preview">
+            <img src="assets/photo-after.png" alt="真实风格迁移效果预览" data-i18n-alt="photoAfterAlt">
+            <span>OUTPUT / PHOTOREALISTIC</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section showcase-section" id="showcase">
+      <div class="shell showcase-grid">
+        <div class="showcase-copy reveal">
+          <span class="section-number">03 / BEFORE &amp; AFTER</span>
+          <h2 data-i18n="showcaseTitle">拖动，而不是想象</h2>
+          <p data-i18n="showcaseBody">直接比较生成前后的变化。结构保持清晰，风格来自你选择的参考图。</p>
+          <div class="effect-list">
+            <span data-i18n="effectSoft">柔和</span>
+            <span data-i18n="effectWarm">暖色</span>
+            <span data-i18n="effectDetail">保留细节</span>
+            <span data-i18n="effectContrast">高对比</span>
+          </div>
+        </div>
+        <div class="showcase-card reveal">
+          <div class="showcase-label"><span data-i18n="artExample">艺术模式示例</span><b data-i18n="dragHint">拖动查看</b></div>
+          <div class="compare art-compare" data-compare style="--split: 52%">
+              <img class="compare-after" src="assets/art-after.png" alt="艺术风格迁移后的芝加哥建筑" data-i18n-alt="artAfterAlt">
+            <div class="compare-before-wrap">
+              <img class="compare-before" src="assets/art-before.jpg" alt="迁移前的芝加哥建筑" data-i18n-alt="artBeforeAlt">
+            </div>
+            <span class="compare-tag before-tag" data-i18n="original">原图</span>
+            <span class="compare-tag after-tag" data-i18n="result">结果</span>
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-handle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m9 8-4 4 4 4m6-8 4 4-4 4M5 12h14"/></svg>
+            </span>
+            <input type="range" min="0" max="100" value="52" aria-label="拖动比较原图和结果" data-i18n-aria="sliderLabel">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell steps-section">
+      <div class="section-heading centered reveal">
+        <span class="section-number">04 / WORKFLOW</span>
+        <h2 data-i18n="stepsTitle">三步完成一次风格迁移</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step reveal"><b>01</b><div class="step-icon">＋</div><h3 data-i18n="step1Title">选择内容图</h3><p data-i18n="step1Body">从电脑、相册或相机选择需要处理的照片。</p></article>
+        <article class="step reveal"><b>02</b><div class="step-icon">⌁</div><h3 data-i18n="step2Title">添加风格图</h3><p data-i18n="step2Body">使用任意绘画或照片作为视觉参考。</p></article>
+        <article class="step reveal"><b>03</b><div class="step-icon">→</div><h3 data-i18n="step3Title">本地生成</h3><p data-i18n="step3Body">调整模式与强度，在设备上生成并保存作品。</p></article>
+      </div>
+    </section>
+
+    <section class="section downloads-section" id="downloads">
+      <div class="shell">
+        <div class="section-heading download-heading reveal">
+          <span class="section-number">05 / DOWNLOAD</span>
+          <h2 data-i18n="downloadsTitle">选择你的设备</h2>
+          <p data-i18n="downloadsBody">所有版本都在本地运行。首次公开版本正在整理签名与安装包。</p>
+        </div>
+        <div class="download-grid">
+          <article class="download-card featured reveal">
+            <span class="recommended" data-i18n="recommended">推荐</span>
+            <div class="platform-icon gpu" aria-hidden="true">▰</div>
+            <div><h3>Windows GPU</h3><p data-i18n="gpuBody">推荐的完整版本。支持 NVIDIA GPU 与 CUDA 加速，也可以切换为 CPU 运行。</p></div>
+            <dl><div><dt data-i18n="packageSize">安装包</dt><dd>≈ 2.68 GB</dd></div><div><dt data-i18n="acceleration">加速</dt><dd>NVIDIA CUDA</dd></div></dl>
+            <a class="button primary" href="#" data-download="windows-gpu"><span data-i18n="viewRelease">查看发布页</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+          </article>
+          <article class="download-card reveal">
+            <span class="release-state" data-i18n="universal">通用</span>
+            <div class="platform-icon windows" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div><h3>Windows CPU</h3><p data-i18n="cpuBody">更小、更通用，适合没有 NVIDIA 显卡或只需要 CPU 运行的电脑。</p></div>
+            <dl><div><dt data-i18n="packageSize">安装包</dt><dd>≈ 380 MB</dd></div><div><dt data-i18n="requirement">要求</dt><dd>Windows 10/11</dd></div></dl>
+            <a class="button secondary" href="#" data-download="windows-cpu"><span data-i18n="downloadZip">下载 ZIP</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+          </article>
+          <article class="download-card reveal">
+            <span class="release-state">BETA</span>
+            <div class="platform-icon android" aria-hidden="true">⌁</div>
+            <div><h3>Android</h3><p data-i18n="androidBody">适用于 Android 10 及以上手机，支持系统硬件加速。</p></div>
+            <dl><div><dt data-i18n="packageSize">安装包</dt><dd>≈ 136 MB</dd></div><div><dt data-i18n="requirement">要求</dt><dd>Android 10+</dd></div></dl>
+            <a class="button secondary" href="#" data-download="android"><span data-i18n="downloadApk">下载 APK</span></a>
+          </article>
+          <article class="download-card muted-card reveal">
+            <span class="release-state" data-i18n="inDevelopment">开发中</span>
+            <div class="platform-icon apple" aria-hidden="true">●</div>
+            <div><h3>iPhone</h3><p data-i18n="iosBody">原生版本已经开始开发，完成签名与真机验证后开放。</p></div>
+            <dl><div><dt data-i18n="statusLabel">状态</dt><dd data-i18n="sourceReady">源码已准备</dd></div><div><dt data-i18n="requirement">要求</dt><dd>iOS 16+</dd></div></dl>
+            <button class="button disabled" type="button" disabled data-i18n="comingSoon">敬请期待</button>
+          </article>
+        </div>
+        <p class="release-note reveal"><span>!</span><span data-i18n-html="releaseNote">安装包由 GitHub Releases 提供，并附带 <b>SHA-256</b> 校验值；GPU 完整包的发布方式仍在优化。</span></p>
+      </div>
+    </section>
+
+    <section class="section shell faq-section" id="faq">
+      <div class="section-heading reveal">
+        <span class="section-number">06 / FAQ</span>
+        <h2 data-i18n="faqTitle">下载之前，你可能想知道</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary data-i18n="faq1Q">我的照片会上传到服务器吗？</summary><p data-i18n="faq1A">不会。桌面版和手机版都在用户设备上完成模型推理，网站只用于展示和下载。</p></details>
+        <details><summary data-i18n="faq2Q">Windows 版需要安装 Python 或 PyTorch 吗？</summary><p data-i18n="faq2A">不需要。便携版已经包含运行环境，解压完整文件夹后即可启动。</p></details>
+        <details><summary data-i18n="faq3Q">没有 NVIDIA 显卡可以使用吗？</summary><p data-i18n="faq3A">可以。请选择 Windows CPU 版；GPU 版则专门为兼容的 NVIDIA 显卡准备。</p></details>
+        <details><summary data-i18n="faq4Q">输出图片会改变原图比例吗？</summary><p data-i18n="faq4A">不会。应用会按内容图比例调整尺寸，并将边长对齐到模型支持的规格。</p></details>
+        <details><summary data-i18n="faq5Q">为什么 Windows GPU 版比较大？</summary><p data-i18n="faq5A">它包含 PyTorch、CUDA 运行库和模型，确保新电脑不需要手动配置开发环境。</p></details>
+      </div>
+    </section>
+
+    <section class="creator-section">
+      <div class="shell creator-card reveal">
+        <div class="creator-sign" aria-hidden="true">YS</div>
+        <div class="creator-copy">
+          <span class="section-number">07 / CREATOR</span>
+          <h2 data-i18n="creatorTitle">由创作者独立设计与开发</h2>
+          <p data-i18n="creatorBody">StyleMapping Studio 源于对图像风格迁移的研究，希望让更多人无需配置开发环境，也能在自己的设备上使用它。</p>
+        </div>
+        <div class="creator-links">
+          <a class="creator-link" href="https://github.com/yueyisui" target="_blank" rel="noopener noreferrer" aria-label="GitHub @yueyisui">
+            <span>GitHub</span>
+            <strong>@yueyisui</strong>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a class="creator-link" href="https://yueyisui.github.io/" target="_blank" rel="noopener noreferrer" aria-label="yueyisui 个人主页">
+            <span data-i18n="personalHomepage">个人主页</span>
+            <strong>yueyisui.github.io</strong>
+            <b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="shell closing-inner reveal">
+        <span class="closing-mark">S</span>
+        <div><small>STYLEMAPPING STUDIO</small><h2 data-i18n="closingTitle">把计算留在设备，把作品留给自己。</h2></div>
+        <a class="button primary" href="#downloads" data-i18n="chooseVersion">选择版本</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div><strong>StyleMapping Studio</strong><p data-i18n="footerText">本地优先的艺术与真实风格迁移工具。</p><a class="footer-author" href="https://github.com/yueyisui" target="_blank" rel="noopener noreferrer">Created by @yueyisui</a></div>
+      <div class="footer-links"><a href="#downloads" data-i18n="navDownload">下载</a><a href="#faq" data-i18n="navFaq">常见问题</a><a href="#" data-github-link>GitHub</a></div>
+      <p>© <span id="year" data-year></span> StyleMapping Studio · Apache-2.0</p>
+    </div>
+  </footer>
+</body>
+</html>
