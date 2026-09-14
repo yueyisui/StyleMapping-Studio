@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">StyleMapping Studio</title>
+  <desc id="desc">A lime green rounded-square mark with a dark stylized letter S.</desc>
+  <defs>
+    <linearGradient id="surface" x1="18" y1="12" x2="102" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FF72"/>
+      <stop offset="1" stop-color="#A9F12F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#07100A" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect x="8" y="8" width="104" height="104" rx="30" fill="url(#surface)" filter="url(#shadow)"/>
+  <path fill="#0B110D" d="M80.4 35.5H52.2c-9.4 0-15.7 5.4-15.7 13.2 0 8.2 6.2 12.8 16.7 12.8h13.6c12.4 0 20.7 7.5 20.7 19.1 0 12.6-9.8 21.9-24.8 21.9H34.1V87h28.5c6.3 0 9.5-2.2 9.5-6.2 0-3.8-3-5.8-8.8-5.8H50.5C32.6 75 21 65.3 21 49.3 21 32.2 34 18 53.4 18h27z"/>
+  <circle cx="93" cy="27" r="7" fill="#ECFFD0"/>
+</svg>

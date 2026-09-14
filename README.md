@@ -1,6 +1,25 @@
-# StyleMapping Studio
+<div align="center">
+  <a href="https://yueyisui.github.io/StyleMapping-Studio/">
+    <img src=".github/assets/stylemapping-mark.svg" width="88" alt="StyleMapping Studio logo">
+  </a>
+  <h1>StyleMapping Studio</h1>
+  <p><strong>把灵感映射到每一张照片 · Map inspiration onto every photo</strong></p>
+  <p>艺术与真实风格迁移，在你的设备上完成。</p>
+  <p>
+    <a href="https://github.com/yueyisui/StyleMapping-Studio/releases/tag/v0.1.0-beta"><img alt="Release v0.1.0-beta" src="https://img.shields.io/badge/Release-v0.1.0--beta-C7FF4A?style=flat-square&logo=github&logoColor=0B110D&labelColor=182018"></a>
+    <img alt="Windows 10 and 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-2B7CD3?style=flat-square&logo=windows11&logoColor=white">
+    <img alt="Android 10 or later" src="https://img.shields.io/badge/Android-10%2B-3DDC84?style=flat-square&logo=android&logoColor=white">
+    <img alt="Local inference" src="https://img.shields.io/badge/Inference-100%25%20Local-C7FF4A?style=flat-square&logo=shield&logoColor=0B110D&labelColor=182018">
+  </p>
+  <p>
+    <a href="#中文">🇨🇳 中文</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#english">🌐 English</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="https://yueyisui.github.io/StyleMapping-Studio/">✨ 产品官网 / Website</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="https://github.com/yueyisui/StyleMapping-Studio/releases">⬇️ 下载 / Releases</a>
+  </p>
+</div>
 
-[中文](#中文) · [English](#english) · [产品官网 / Website](https://yueyisui.github.io/StyleMapping-Studio/) · [下载 / Releases](https://github.com/yueyisui/StyleMapping-Studio/releases)
+---
 
 ## 中文
 
