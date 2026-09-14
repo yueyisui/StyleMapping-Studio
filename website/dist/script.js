@@ -74,6 +74,9 @@ const translations = {
     requirement: "要求",
     acceleration: "加速",
     downloadZip: "下载 ZIP",
+    downloadBaidu: "百度网盘下载",
+    baiduMirror: "百度网盘备用下载 · 提取码",
+    accessCode: "提取码",
     androidBody: "适用于 Android 10 及以上手机，支持系统硬件加速。",
     downloadApk: "下载 APK",
     gpuBody: "推荐的完整版本。支持 NVIDIA GPU 与 CUDA 加速，也可以切换为 CPU 运行。",
@@ -83,7 +86,7 @@ const translations = {
     statusLabel: "状态",
     sourceReady: "源码已准备",
     comingSoon: "敬请期待",
-    releaseNote: "安装包由 GitHub Releases 提供，并附带 <b>SHA-256</b> 校验值；GPU 完整包的发布方式仍在优化。",
+    releaseNote: "CPU 与 Android 由 GitHub Releases 提供并附带 <b>SHA-256</b> 校验值，同时提供百度网盘备用下载；GPU 完整包通过百度网盘分发。",
     faqTitle: "下载之前，你可能想知道",
     faq1Q: "我的照片会上传到服务器吗？",
     faq1A: "不会。桌面版和手机版都在用户设备上完成模型推理，网站只用于展示和下载。",
@@ -179,6 +182,9 @@ const translations = {
     requirement: "Requires",
     acceleration: "Acceleration",
     downloadZip: "Download ZIP",
+    downloadBaidu: "Download from Baidu",
+    baiduMirror: "Baidu mirror · code",
+    accessCode: "Access code",
     androidBody: "For phones running Android 10 or later, with system hardware acceleration.",
     downloadApk: "Download APK",
     gpuBody: "The recommended full edition. Supports NVIDIA GPU and CUDA acceleration, with an optional CPU mode.",
@@ -188,7 +194,7 @@ const translations = {
     statusLabel: "Status",
     sourceReady: "Source prepared",
     comingSoon: "Coming soon",
-    releaseNote: "Packages are delivered through GitHub Releases with <b>SHA-256</b> checksums. Distribution of the full GPU package is still being optimized.",
+    releaseNote: "CPU and Android packages are available from GitHub Releases with <b>SHA-256</b> checksums and Baidu mirrors. The full GPU package is distributed through Baidu Netdisk.",
     faqTitle: "Before you download",
     faq1Q: "Will my photos be uploaded to a server?",
     faq1A: "No. Both desktop and mobile editions run inference on your device. This website is only for the showcase and downloads.",
@@ -274,7 +280,7 @@ function resolveRepository() {
 }
 
 const authorProfileUrl = "https://github.com/yueyisui";
-const repositoryUrl = resolveRepository();
+const repositoryUrl = resolveRepository() || "https://github.com/yueyisui/StyleMapping-Studio";
 document.querySelectorAll("[data-github-link]").forEach((link) => {
   link.href = repositoryUrl || authorProfileUrl;
 });
@@ -283,7 +289,7 @@ const downloadTargets = repositoryUrl
   ? {
       "windows-cpu": `${repositoryUrl}/releases/download/v0.1.0-beta/StyleMapping-Studio-Windows-CPU.zip`,
       android: `${repositoryUrl}/releases/download/v0.1.0-beta/StyleMapping-Studio-Android.apk`,
-      "windows-gpu": `${repositoryUrl}/releases/tag/v0.1.0-beta`
+      "windows-gpu": "https://pan.baidu.com/s/1rxog7HNFYwFWfMNj0-955w?pwd=21hs"
     }
   : null;
 
@@ -295,6 +301,15 @@ document.querySelectorAll("[data-download]").forEach((link) => {
     link.href = "#downloads";
     link.dataset.releasePending = "true";
   }
+});
+
+const mirrorTargets = {
+  "windows-cpu": "https://pan.baidu.com/s/1nV-9wP16F7swJOjM8bfxDw?pwd=3j4f",
+  android: "https://pan.baidu.com/s/1ihqIyN6TyGy0Rsv0iCy4tg?pwd=4tv9"
+};
+
+document.querySelectorAll("[data-mirror]").forEach((link) => {
+  link.href = mirrorTargets[link.dataset.mirror] || "#downloads";
 });
 
 if (navToggle && navLinks) {

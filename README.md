@@ -25,6 +25,14 @@
 
 StyleMapping Studio 是一款本地运行的 AI 图像风格迁移工具，支持艺术风格迁移与真实风格迁移。照片和模型推理都保留在用户设备上，不需要上传到云端。
 
+### 下载
+
+| 版本 | GitHub | 百度网盘 |
+| --- | --- | --- |
+| Windows GPU | 文件超过 GitHub 单文件限制 | [下载](https://pan.baidu.com/s/1rxog7HNFYwFWfMNj0-955w?pwd=21hs) · 提取码 `21hs` |
+| Windows CPU | [下载 ZIP](https://github.com/yueyisui/StyleMapping-Studio/releases/download/v0.1.0-beta/StyleMapping-Studio-Windows-CPU.zip) | [备用下载](https://pan.baidu.com/s/1nV-9wP16F7swJOjM8bfxDw?pwd=3j4f) · 提取码 `3j4f` |
+| Android | [下载 APK](https://github.com/yueyisui/StyleMapping-Studio/releases/download/v0.1.0-beta/StyleMapping-Studio-Android.apk) | [备用下载](https://pan.baidu.com/s/1ihqIyN6TyGy0Rsv0iCy4tg?pwd=4tv9) · 提取码 `4tv9` |
+
 ### 可用版本
 
 | 平台 | 状态 | 说明 |
@@ -70,6 +78,14 @@ StyleMapping Studio 是一款本地运行的 AI 图像风格迁移工具，支�
 ## English
 
 StyleMapping Studio is a local-first AI image style transfer application supporting both artistic and photorealistic transfer. Your photos and model inference stay on your device—nothing needs to be uploaded to the cloud.
+
+### Downloads
+
+| Edition | GitHub | Baidu Netdisk |
+| --- | --- | --- |
+| Windows GPU | File exceeds GitHub's per-file limit | [Download](https://pan.baidu.com/s/1rxog7HNFYwFWfMNj0-955w?pwd=21hs) · code `21hs` |
+| Windows CPU | [Download ZIP](https://github.com/yueyisui/StyleMapping-Studio/releases/download/v0.1.0-beta/StyleMapping-Studio-Windows-CPU.zip) | [Mirror](https://pan.baidu.com/s/1nV-9wP16F7swJOjM8bfxDw?pwd=3j4f) · code `3j4f` |
+| Android | [Download APK](https://github.com/yueyisui/StyleMapping-Studio/releases/download/v0.1.0-beta/StyleMapping-Studio-Android.apk) | [Mirror](https://pan.baidu.com/s/1ihqIyN6TyGy0Rsv0iCy4tg?pwd=4tv9) · code `4tv9` |
 
 ### Available editions
 

@@ -211,21 +211,30 @@
             <div class="platform-icon gpu" aria-hidden="true">▰</div>
             <div><h3>Windows GPU</h3><p data-i18n="gpuBody">推荐的完整版本。支持 NVIDIA GPU 与 CUDA 加速，也可以切换为 CPU 运行。</p></div>
             <dl><div><dt data-i18n="packageSize">安装包</dt><dd>≈ 2.68 GB</dd></div><div><dt data-i18n="acceleration">加速</dt><dd>NVIDIA CUDA</dd></div></dl>
-            <a class="button primary" href="#" data-download="windows-gpu"><span data-i18n="viewRelease">查看发布页</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+            <div class="download-actions">
+              <a class="button primary" href="#" data-download="windows-gpu" target="_blank" rel="noopener noreferrer"><span data-i18n="downloadBaidu">百度网盘下载</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+              <span class="access-code"><span data-i18n="accessCode">提取码</span> <b>21hs</b></span>
+            </div>
           </article>
           <article class="download-card reveal">
             <span class="release-state" data-i18n="universal">通用</span>
             <div class="platform-icon windows" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
             <div><h3>Windows CPU</h3><p data-i18n="cpuBody">更小、更通用，适合没有 NVIDIA 显卡或只需要 CPU 运行的电脑。</p></div>
             <dl><div><dt data-i18n="packageSize">安装包</dt><dd>≈ 380 MB</dd></div><div><dt data-i18n="requirement">要求</dt><dd>Windows 10/11</dd></div></dl>
-            <a class="button secondary" href="#" data-download="windows-cpu"><span data-i18n="downloadZip">下载 ZIP</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+            <div class="download-actions">
+              <a class="button secondary" href="#" data-download="windows-cpu"><span data-i18n="downloadZip">下载 ZIP</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+              <a class="mirror-link" href="#" data-mirror="windows-cpu" target="_blank" rel="noopener noreferrer"><span data-i18n="baiduMirror">百度网盘备用下载</span><b>3j4f</b></a>
+            </div>
           </article>
           <article class="download-card reveal">
             <span class="release-state">BETA</span>
             <div class="platform-icon android" aria-hidden="true">⌁</div>
             <div><h3>Android</h3><p data-i18n="androidBody">适用于 Android 10 及以上手机，支持系统硬件加速。</p></div>
             <dl><div><dt data-i18n="packageSize">安装包</dt><dd>≈ 136 MB</dd></div><div><dt data-i18n="requirement">要求</dt><dd>Android 10+</dd></div></dl>
-            <a class="button secondary" href="#" data-download="android"><span data-i18n="downloadApk">下载 APK</span></a>
+            <div class="download-actions">
+              <a class="button secondary" href="#" data-download="android"><span data-i18n="downloadApk">下载 APK</span></a>
+              <a class="mirror-link" href="#" data-mirror="android" target="_blank" rel="noopener noreferrer"><span data-i18n="baiduMirror">百度网盘备用下载</span><b>4tv9</b></a>
+            </div>
           </article>
           <article class="download-card muted-card reveal">
             <span class="release-state" data-i18n="inDevelopment">开发中</span>
@@ -235,7 +244,7 @@
             <button class="button disabled" type="button" disabled data-i18n="comingSoon">敬请期待</button>
           </article>
         </div>
-        <p class="release-note reveal"><span>!</span><span data-i18n-html="releaseNote">安装包由 GitHub Releases 提供，并附带 <b>SHA-256</b> 校验值；GPU 完整包的发布方式仍在优化。</span></p>
+        <p class="release-note reveal"><span>!</span><span data-i18n-html="releaseNote">CPU 与 Android 由 GitHub Releases 提供并附带 <b>SHA-256</b> 校验值，同时提供百度网盘备用下载；GPU 完整包通过百度网盘分发。</span></p>
       </div>
     </section>
 

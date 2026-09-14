@@ -229,6 +229,11 @@ h1 em { color: var(--accent); font-style: normal; }
 .download-card dt { color: #768279; }
 .download-card dd { margin: 0; color: #c7d0c9; text-align: right; }
 .download-card .button { width: 100%; margin-top: 4px; font-size: 14px; }
+.download-actions { display: grid; gap: 10px; }
+.access-code, .mirror-link { min-height: 24px; display: flex; align-items: center; justify-content: center; gap: 7px; color: #849087; font-size: 12px; }
+.access-code b, .mirror-link b { padding: 2px 7px; border: 1px solid #3b473d; border-radius: 6px; color: var(--accent); background: rgba(201,247,92,.06); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
+.mirror-link { transition: color .2s ease; }
+.mirror-link:hover { color: var(--text); }
 .muted-card { opacity: .74; background: #101411; }
 .release-note { display: flex; align-items: flex-start; justify-content: center; gap: 10px; margin: 25px 0 0; color: #849087; font-size: 13px; text-align: center; }
 .release-note > span:first-child { width: 19px; height: 19px; display: inline-grid; flex: 0 0 19px; place-items: center; border: 1px solid #49554b; border-radius: 50%; color: var(--accent); line-height: 1; }
