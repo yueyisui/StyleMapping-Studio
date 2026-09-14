@@ -1,6 +1,6 @@
 # StyleMapping Studio
 
-[中文](#中文) · [English](#english) · [产品官网 / Website](https://yueyisui.github.io/StyleMapping-Studio/) · [下载 / Releases](https://github.com/yueyisui/StyleMapping-Studio/releases/latest)
+[中文](#中文) · [English](#english) · [产品官网 / Website](https://yueyisui.github.io/StyleMapping-Studio/) · [下载 / Releases](https://github.com/yueyisui/StyleMapping-Studio/releases)
 
 ## 中文
 

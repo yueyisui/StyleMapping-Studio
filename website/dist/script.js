@@ -281,9 +281,9 @@ document.querySelectorAll("[data-github-link]").forEach((link) => {
 
 const downloadTargets = repositoryUrl
   ? {
-      "windows-cpu": `${repositoryUrl}/releases/latest/download/StyleMapping-Studio-Windows-CPU.zip`,
-      android: `${repositoryUrl}/releases/latest/download/StyleMapping-Studio-Android.apk`,
-      "windows-gpu": `${repositoryUrl}/releases/latest`
+      "windows-cpu": `${repositoryUrl}/releases/download/v0.1.0-beta/StyleMapping-Studio-Windows-CPU.zip`,
+      android: `${repositoryUrl}/releases/download/v0.1.0-beta/StyleMapping-Studio-Android.apk`,
+      "windows-gpu": `${repositoryUrl}/releases/tag/v0.1.0-beta`
     }
   : null;
 
